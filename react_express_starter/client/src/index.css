@@ -1,0 +1,45 @@
+.test{height: 80%}
+.row{padding: 100}
+.col-sm{padding: 0}
+footer{
+    text-align: right;
+    background-color: lightgray;
+    padding: 50px;
+}
+footer .admin-link{
+    position: relative;
+    
+   
+}
+.container{
+    margin-top: 20px;
+}
+.album-collection{
+    min-height: 1080;
+}
+.navbar{
+    background-color:darkgray;
+    background-image: url("texture4.jpg");
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 10px;
+}
+.input-with-submit{
+    margin: auto;
+}
+.carousel{
+    border-style: solid;
+    border-color: black;
+    border-width: 4px;
+}
+.nav-link{
+    font-size: 20px;
+}
+.row >.card {
+    width: 18rem;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.card-title,.pb-4{
+    -webkit-text-fill-color: black;
+}

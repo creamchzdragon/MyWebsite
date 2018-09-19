@@ -1,0 +1,28 @@
+{
+    "name":"Jamie Tyler Walder",
+    "email":"jtwalder@gmail.com",
+    "blogposts":[
+        {
+            "key":"1",
+            "subject":"blah",
+            "date":"11/11/11",
+            "text":"blah blah blah",
+            "photoLinkes":["xxx","xxx","xxx"]
+        },
+        {
+            "key":"2",
+            "subject":"blah",
+            "date":"11/11/11",
+            "text":"blah blah blah",
+            "photoLinkes":["xxx","xxx","xxx"]
+        }
+
+    ],
+    "showcasepics":[
+        "pic1.jpg",
+        "pic2.jpg",
+        "pics3.jpg"
+    ]
+
+    
+}
