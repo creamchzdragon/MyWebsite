@@ -7,6 +7,7 @@ import {Button} from 'reactstrap';
 import DateTimePicker from 'react-widgets/lib/DateTimePicker';
 import {NavBar,NavBarItem} from '../common/NavBar';
 import {Footer} from '../common/Footer';
+import {Document,Page} from 'react-pdf'
 
 class Resume extends React.Component{
     constructor(props){
@@ -18,12 +19,21 @@ class Resume extends React.Component{
           }
       }
     render(){
+        var style={
+            paddingLeft:"28%",
+            paddingRight:"28%",
+            backgroundColor:"grey"
+        };
       return(<div>
         <NavBar pages={this.state.pages} currentPage={this.state.currentPage}></NavBar>
-         <text>I do things</text>
-         
+        <div style={style}>
+            <Document file="resume.pdf" >
+                <Page pageNumber={1}/>
+            </Document>
+        </div>
          
         <Footer/>
+        
        </div>);
     }
   }
