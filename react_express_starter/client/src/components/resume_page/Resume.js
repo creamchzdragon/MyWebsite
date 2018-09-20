@@ -20,8 +20,9 @@ class Resume extends React.Component{
       }
     render(){
         var style={
-            paddingLeft:"28%",
             paddingRight:"28%",
+            paddingLeft:"28%",
+            
             backgroundColor:"grey"
         };
       return(<div>

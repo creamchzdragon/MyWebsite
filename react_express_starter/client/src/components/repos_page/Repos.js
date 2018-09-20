@@ -25,13 +25,15 @@ class Repos extends React.Component{
       
       return(<div>
         <NavBar pages={this.state.pages} currentPage={this.state.currentPage}></NavBar>
-        <h1>My Repos</h1>
+        <div style={{backgroundColor:"gray"}}>
+        <h1 style={{backgroundColor:"white", borderBottom:"solid", paddingBottom:"10px"}}>My Repos</h1>
          {this.state.githubData.map((repo,i)=>{
            return(
               <RepoCard repoName={repo.name} repoDesc={repo.description} repoComiterURL={repo.contributors_url} repoPicture={repo.owner.avatar_url}
               repoLink={repo.html_url} repoLastUpdated={repo.updated_at} repoCreated={repo.created_at} />
            );
          })}
+         </div>
          
          
         <Footer/>
@@ -69,40 +71,46 @@ class Repos extends React.Component{
       }
       var picStyle={
         width:"200px",
-        height: "auto"
+        height: "auto",
+        marginLeft:"100px",
+        
       }
       var cardStyle={
-        marginLeft:"200px"
+        margin:"auto"
+      
       }
       return(
-        <div>
+       
           
-        <div class="card">
-        <div class="card-body" style={cardStyle}>
-          <div className="container"><div className="row">
+        <div style={{margin:"auto",padding:"20px",width:"800px",marginBottom:"20px" ,borderStyle:"solid",backgroundColor:"white"} }>
+        
+          <div className="container" style={{margin:"auto" ,padding:"20px"}}>
+            <div className="row">
             <div className="col">
-            <div className="container">
-              <div className="row">
+            
+              
                 <h3 class="card-title">{this.state.repoName}</h3>
                 <h6 class="card-title" style={style}>{members}</h6>
-              </div>
+              
               {this.state.repoDesc?<p class="card-text">{this.state.repoDesc}</p>:
               <p>There are no word to describe how awesome this project is...</p>}
               <a href={this.state.repoLink} class="btn btn-primary" style={{marginTop:"100px"}}>Check it out!</a>
             </div>
-            </div>
             
-            <div className="col-sm" width="20%">
-            <img class="card-img"  style={picStyle} src={this.state.repoPicture} alt="Owner Profile Pictures"/>
-              <p className="card-text">Created: {new Date(this.state.repoCreated).toLocaleDateString()}</p>
-              <p className="card-text">Last Updated: {new Date(this.state.repoLastUpdated).toLocaleDateString()}</p>
+            
+            <div className="col-sm">
+              <img class="card-img-top"  style={picStyle} src={this.state.repoPicture} alt="Owner Profile Pictures"/>
+              <div style={{marginLeft:"100px", borderStyle:"dotted",borderWidth:"2px",borderColor:"gray",width:"200px"}}>
+                <p className="card-text">Created: {new Date(this.state.repoCreated).toLocaleDateString()}</p>
+                <p className="card-text">Last Updated: {new Date(this.state.repoLastUpdated).toLocaleDateString()}</p>
+              </div>
               </div>
             
-            
-        </div></div>
+              </div>
+        
         </div>
       </div>
-      </div>
+     
       );
     }
   }
